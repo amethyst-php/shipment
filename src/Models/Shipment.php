@@ -21,4 +21,20 @@ class Shipment extends Model implements EntityContract
         $this->ini('amethyst.shipment.data.shipment');
         parent::__construct($attributes);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function sender()
+    {
+        return $this->belongsTo(Address::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function recipient()
+    {
+        return $this->belongsTo(Address::class);
+    }
 }

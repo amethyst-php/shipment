@@ -16,8 +16,10 @@ class ShipmentFaker extends Faker
         $faker = Factory::create();
 
         $bag = new Bag();
-        $bag->set('name', $faker->name);
-        $bag->set('description', $faker->text);
+        $bag->set('label', $faker->name);
+        $bag->set('status', $faker->name);
+        $bag->set('sender', AddressFaker::make()->parameters()->toArray());
+        $bag->set('recipient', AddressFaker::make()->parameters()->toArray());
 
         return $bag;
     }
