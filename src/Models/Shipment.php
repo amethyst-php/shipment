@@ -25,7 +25,7 @@ class Shipment extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function sender()
+    public function sender_address()
     {
         return $this->belongsTo(Address::class);
     }
@@ -33,7 +33,7 @@ class Shipment extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function recipient()
+    public function recipient_address()
     {
         return $this->belongsTo(Address::class);
     }

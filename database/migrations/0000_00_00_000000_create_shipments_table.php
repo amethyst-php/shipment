@@ -18,11 +18,15 @@ class CreateShipmentsTable extends Migration
             $table->string('status')->nullable();
             $table->string('label')->nullable();
 
-            $table->integer('sender_id')->unsigned();
-            $table->foreign('sender_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
+            $table->integer('sender_address_id')->unsigned();
+            $table->foreign('sender_address_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
 
-            $table->integer('recipient_id')->unsigned();
-            $table->foreign('recipient_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
+            $table->integer('recipient_address_id')->unsigned();
+            $table->foreign('recipient_address_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
+
+            $table->string('recipient_name');
+            $table->string('recipient_phone');
+            $table->text('recipient_notes')->nullable();
 
             $table->timestamps();
             $table->softDeletes();

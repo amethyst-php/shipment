@@ -23,12 +23,15 @@ class ShipmentSchema extends Schema
                 }),
             Attributes\TextAttribute::make('label'),
             Attributes\TextAttribute::make('status'),
-            Attributes\BelongsToAttribute::make('sender_id')
-                ->setRelationName('sender')
+            Attributes\BelongsToAttribute::make('sender_address_id')
+                ->setRelationName('sender_address')
                 ->setRelationManager(AddressManager::class),
-            Attributes\BelongsToAttribute::make('recipient_id')
-                ->setRelationName('recipient')
+            Attributes\BelongsToAttribute::make('recipient_address_id')
+                ->setRelationName('recipient_address')
                 ->setRelationManager(AddressManager::class),
+            Attributes\TextAttribute::make('recipient_name'),
+            Attributes\TextAttribute::make('recipient_phone'),
+            Attributes\LongTextAttribute::make('recipient_notes'),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),

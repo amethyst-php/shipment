@@ -18,8 +18,11 @@ class ShipmentFaker extends Faker
         $bag = new Bag();
         $bag->set('label', $faker->name);
         $bag->set('status', $faker->name);
-        $bag->set('sender', AddressFaker::make()->parameters()->toArray());
-        $bag->set('recipient', AddressFaker::make()->parameters()->toArray());
+        $bag->set('sender_address', AddressFaker::make()->parameters()->toArray());
+        $bag->set('recipient_address', AddressFaker::make()->parameters()->toArray());
+        $bag->set('recipient_name', $faker->name);
+        $bag->set('recipient_phone', $faker->phoneNumber);
+        $bag->set('recipient_notes', $faker->text);
 
         return $bag;
     }
