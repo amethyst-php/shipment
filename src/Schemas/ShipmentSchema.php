@@ -21,6 +21,8 @@ class ShipmentSchema extends Schema
                 ->setDefault(function ($entity, $attribute) {
                     return $attribute->getManager()->getRepository()->generateUid();
                 }),
+            Attributes\TextAttribute::make('tracking_code')
+                ->setUnique(true),
             Attributes\TextAttribute::make('label'),
             Attributes\TextAttribute::make('status'),
             Attributes\BelongsToAttribute::make('sender_address_id')
