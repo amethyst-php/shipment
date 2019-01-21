@@ -27,11 +27,14 @@ class ShipmentSchema extends Schema
             Attributes\TextAttribute::make('status'),
             Attributes\BelongsToAttribute::make('sender_address_id')
                 ->setRelationName('sender_address')
-                ->setRelationManager(AddressManager::class),
+                ->setRelationManager(AddressManager::class)
+                ->setRequired(true),
             Attributes\BelongsToAttribute::make('recipient_address_id')
                 ->setRelationName('recipient_address')
-                ->setRelationManager(AddressManager::class),
-            Attributes\TextAttribute::make('recipient_name'),
+                ->setRelationManager(AddressManager::class)
+                ->setRequired(true),
+            Attributes\TextAttribute::make('recipient_name')
+                ->setRequired(true),
             Attributes\TextAttribute::make('recipient_phone'),
             Attributes\LongTextAttribute::make('recipient_notes'),
             Attributes\CreatedAtAttribute::make(),

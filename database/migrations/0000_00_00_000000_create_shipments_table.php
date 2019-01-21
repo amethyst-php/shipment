@@ -26,7 +26,7 @@ class CreateShipmentsTable extends Migration
             $table->foreign('recipient_address_id')->references('id')->on(Config::get('amethyst.address.data.address.table'));
 
             $table->string('recipient_name');
-            $table->string('recipient_phone');
+            $table->string('recipient_phone')->nullable();
             $table->text('recipient_notes')->nullable();
 
             $table->timestamps();
