@@ -35,11 +35,11 @@ return [
     'http' => [
         'admin' => [
             'shipment' => [
-                'enabled'     => true,
-                'controller'  => Railken\Amethyst\Http\Controllers\Admin\ShipmentsController::class,
-                'router'      => [
-                    'as'        => 'shipment.',
-                    'prefix'    => '/shipments',
+                'enabled'    => true,
+                'controller' => Railken\Amethyst\Http\Controllers\Admin\ShipmentsController::class,
+                'router'     => [
+                    'as'     => 'shipment.',
+                    'prefix' => '/shipments',
                 ],
             ],
         ],
