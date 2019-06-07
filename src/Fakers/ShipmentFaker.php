@@ -18,6 +18,7 @@ class ShipmentFaker extends Faker
         $bag = new Bag();
         $bag->set('label', $faker->name);
         $bag->set('tracking_code', $faker->name);
+        $bag->set('delivery_code', $faker->name);
         $bag->set('status', $faker->name);
         $bag->set('sender_address', AddressFaker::make()->parameters()->toArray());
         $bag->set('recipient_address', AddressFaker::make()->parameters()->toArray());

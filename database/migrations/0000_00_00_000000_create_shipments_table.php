@@ -16,6 +16,7 @@ class CreateShipmentsTable extends Migration
             $table->increments('id');
             $table->string('uid')->unique();
             $table->string('tracking_code')->unique()->nullable();
+            $table->string('delivery_code')->unique()->nullable();
             $table->string('status')->nullable();
             $table->string('label')->nullable();
 

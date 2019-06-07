@@ -23,6 +23,8 @@ class ShipmentSchema extends Schema
                 }),
             Attributes\TextAttribute::make('tracking_code')
                 ->setUnique(true),
+            Attributes\TextAttribute::make('delivery_code')
+                ->setUnique(true),
             Attributes\TextAttribute::make('label'),
             Attributes\TextAttribute::make('status'),
             Attributes\BelongsToAttribute::make('sender_address_id')
