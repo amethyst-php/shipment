@@ -1,11 +1,11 @@
 {
-    "name": "railken/amethyst-shipment",
+    "name": "amethyst/shipment",
     "keywords": ["laravel", "amethyst", "amethyst-shipment", "shipment"],
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "railken/amethyst-common": "0.1.*",
-        "railken/amethyst-address": "0.1.*",
+        "amethyst/common": "0.1.*",
+        "amethyst/address": "0.1.*",
         "ramsey/uuid": "^3.8"
     },
     "require-dev": {
@@ -14,18 +14,18 @@
     },
     "autoload": {
         "psr-4" : {
-            "Railken\\Amethyst\\" : "src/"
+            "Amethyst\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": { 
-            "Railken\\Amethyst\\Tests\\": "tests/" 
+            "Amethyst\\Tests\\": "tests/" 
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Railken\\Amethyst\\Providers\\ShipmentServiceProvider"
+                "Amethyst\\Providers\\ShipmentServiceProvider"
             ]
         }
     }

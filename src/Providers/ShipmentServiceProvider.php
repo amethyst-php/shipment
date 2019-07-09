@@ -1,8 +1,8 @@
 <?php
 
-namespace Railken\Amethyst\Providers;
+namespace Amethyst\Providers;
 
-use Railken\Amethyst\Common\CommonServiceProvider;
+use Amethyst\Common\CommonServiceProvider;
 
 class ShipmentServiceProvider extends CommonServiceProvider
 {
@@ -13,6 +13,6 @@ class ShipmentServiceProvider extends CommonServiceProvider
     {
         parent::register();
 
-        $this->app->register(\Railken\Amethyst\Providers\AddressServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\AddressServiceProvider::class);
     }
 }
