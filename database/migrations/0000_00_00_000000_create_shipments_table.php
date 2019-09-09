@@ -14,9 +14,9 @@ class CreateShipmentsTable extends Migration
     {
         Schema::create(Config::get('amethyst.shipment.data.shipment.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('uid')->unique();
-            $table->string('tracking_code')->unique()->nullable();
-            $table->string('delivery_code')->unique()->nullable();
+            $table->string('uid')->index();
+            $table->string('tracking_code')->index()->nullable();
+            $table->string('delivery_code')->index()->nullable();
             $table->string('status')->nullable();
             $table->string('label')->nullable();
 
