@@ -23,25 +23,4 @@ return [
             'manager'    => Amethyst\Managers\ShipmentManager::class,
         ],
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Http configuration
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the routes
-    |
-    */
-    'http' => [
-        'admin' => [
-            'shipment' => [
-                'enabled'    => true,
-                'controller' => Amethyst\Http\Controllers\Admin\ShipmentsController::class,
-                'router'     => [
-                    'as'     => 'shipment.',
-                    'prefix' => '/shipments',
-                ],
-            ],
-        ],
-    ],
 ];
